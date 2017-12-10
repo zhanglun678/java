@@ -21,7 +21,7 @@ public class Test1 {
 		String name = addr.getHostName();
 		System.out.println(name);
 		// 以字节数组形式返回ip
-		byte[] b = addr.getAddress();
+		byte[] b = addr.getAddress() ;
 		// Arrays.toString() 字节数组转为string
 		System.out.println(Arrays.toString(b));
 
