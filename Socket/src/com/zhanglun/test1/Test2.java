@@ -13,14 +13,14 @@ public class Test2 {
 	public static void main(String[] args) throws Exception {
 		URL url = new URL("http://localhost/cookie/cookie.php");
 		URL u = new URL(url, "cookie.php?uname=lisi");
-		System.out.println("Ğ­Òé£º" + u.getProtocol());
-		System.out.println("Ö÷»ú:" + u.getHost());
-		System.out.println("¶Ë¿Ú£º" + u.getPort());
+		System.out.println("åè®®ï¼š" + u.getProtocol());
+		System.out.println("ä¸»æœº:" + u.getHost());
+		System.out.println("ç«¯å£ï¼š" + u.getPort());
 		URLConnection conn = u.openConnection();
 		System.out.println(conn.getDate() + "\t\t" + conn);
-		System.out.println(u.getFile());// ·µ»ØÎÄ¼şÂ·¾¶
-		System.out.println(u.getRef()); // Ãªµã
-		System.out.println(u.getQuery()); // ? ºóµÄÊı¾İ
+		System.out.println(u.getFile());// è¿”å›æ–‡ä»¶è·¯å¾„
+		System.out.println(u.getRef()); // é”šç‚¹
+		System.out.println(u.getQuery()); // ? åçš„æ•°æ®
 		
 		
 	}

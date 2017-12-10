@@ -8,36 +8,36 @@ import java.net.UnknownHostException;
 /**
  * 
  * @author zhanglun
- * @todo ¿Í»§¶ËµÄÊµÏÖ
+ * @todo å®¢æˆ·ç«¯çš„å®ç°
  * @desc
  */
 public class UDPClient {
 	public static void main(String[] args) throws Exception {
 		/**
-		 * Ïò·şÎñÆ÷·¢ËÍÊı¾İ
+		 * å‘æœåŠ¡å™¨å‘é€æ•°æ®
 		 */
-		// ¶¨Òå·şÎñÆ÷µÄµØÖ·,¶Ë¿ÚºÅ£¬ÏàÓ¦µÄÊı¾İ
+		// å®šä¹‰æœåŠ¡å™¨çš„åœ°å€,ç«¯å£å·ï¼Œç›¸åº”çš„æ•°æ®
 		InetAddress addrs = InetAddress.getByName("localhost");
 		int port = 8888;
-		byte[] data = "¿Í»§·¢ËÍµÄĞÅÏ¢£º ÓÃ»§Ãû £ºadmin ÃÜÂë£º123 ".getBytes();
-		// ´´½¨Êı¾İ±¨¡£°üº¬·¢ËÍµÄĞÅÏ¢
+		byte[] data = "å®¢æˆ·å‘é€çš„ä¿¡æ¯ï¼š ç”¨æˆ·å ï¼šadmin å¯†ç ï¼š123 ".getBytes();
+		// åˆ›å»ºæ•°æ®æŠ¥ã€‚åŒ…å«å‘é€çš„ä¿¡æ¯
 		DatagramPacket packet = new DatagramPacket(data, data.length, addrs, port);
-		// ´´½¨ datagramsocket¶ÔÏó
+		// åˆ›å»º datagramsocketå¯¹è±¡
 		DatagramSocket socket = new DatagramSocket();
 		socket.send(packet);
 		// socket.close();
 
 		/**
-		 * ½ÓÊÕÏìÓ¦Êı¾İ
+		 * æ¥æ”¶å“åº”æ•°æ®
 		 */
-		// ´´½¨Êı¾İ±¨£¬½ÓÊÕ·şÎñÆ÷ÏìÓ¦µÄÊı¾İ
+		// åˆ›å»ºæ•°æ®æŠ¥ï¼Œæ¥æ”¶æœåŠ¡å™¨å“åº”çš„æ•°æ®
 		byte[] data2 = new byte[1024];
 		DatagramPacket packet2 = new DatagramPacket(data2, data2.length);
-		// ½ÓÊÕÊı¾İ
+		// æ¥æ”¶æ•°æ®
 		socket.receive(packet2);
-		// ¶ÁÈ¡Êı¾İ
+		// è¯»å–æ•°æ®
 		String reply = new String(data2, 0, data2.length);
-		System.out.println("·şÎñÆ÷ÏìÓ¦µÄÊı¾İÎª£º" + reply);
+		System.out.println("æœåŠ¡å™¨å“åº”çš„æ•°æ®ä¸ºï¼š" + reply);
 		socket.close();
 	}
 }

@@ -7,27 +7,27 @@ import java.util.Arrays;
  * 
  * @author zhanglun
  * @todo
- * @desc InetAddressÀà³£ÓÃ·½·¨
+ * @desc InetAddressç±»å¸¸ç”¨æ–¹æ³•
  */
 public class Test1 {
 	public static void main(String[] args) throws Exception {
-		// »ñÈ¡±¾»úµÄInetAddressÊµÀı
+		// è·å–æœ¬æœºçš„InetAddresså®ä¾‹
 		InetAddress addr = InetAddress.getLocalHost();
 		System.out.println(addr);
-		// ip µØÖ·
+		// ip åœ°å€
 		String host = addr.getHostAddress();
 		System.out.println(host);
-		// ¼ÆËã»úÃû
+		// è®¡ç®—æœºå
 		String name = addr.getHostName();
 		System.out.println(name);
-		// ÒÔ×Ö½ÚÊı×éĞÎÊ½·µ»Øip
+		// ä»¥å­—èŠ‚æ•°ç»„å½¢å¼è¿”å›ip
 		byte[] b = addr.getAddress();
-		// Arrays.toString() ×Ö½ÚÊı×é×ªÎªstring
+		// Arrays.toString() å­—èŠ‚æ•°ç»„è½¬ä¸ºstring
 		System.out.println(Arrays.toString(b));
 
 		System.out.println("==========================");
-		InetAddress addr2 = InetAddress.getByName("192.168.244.1");
-		System.out.println("¼ÆËã»úÃû" + addr2.getHostName());
-		System.out.println("ip µØÖ·" + addr2.getHostAddress());
+		InetAddress addr2 = InetAddress.getByName("192.168.244.11");
+		System.out.println("è®¡ç®—æœºå" + addr2.getHostName());
+		System.out.println("ip åœ°å€" + addr2.getHostAddress());
 	}
 }

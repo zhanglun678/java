@@ -7,39 +7,39 @@ import java.net.InetAddress;
 /**
  * 
  * @author zhanglun
- * @todo ·şÎñ¶Ë£¬»ùÓÚUDPµÄÓÃ»§µÇÂ¼
- * @desc ·şÎñ¶Ë
+ * @todo æœåŠ¡ç«¯ï¼ŒåŸºäºUDPçš„ç”¨æˆ·ç™»å½•
+ * @desc æœåŠ¡ç«¯
  */
 public class UDPServer {
 	public static void main(String[] args) throws Exception {
 		/**
-		 * ½ÓÊÕÊı¾İ
+		 * æ¥æ”¶æ•°æ®
 		 */
-		// ´´½¨·şÎñÆ÷¶Ë DatagramSocket ²¢Ö¸¶¨¶Ë¿Ú
+		// åˆ›å»ºæœåŠ¡å™¨ç«¯ DatagramSocket å¹¶æŒ‡å®šç«¯å£
 		DatagramSocket socket = new DatagramSocket(8888);
-		// ´´½¨Êı¾İ±¨£¬ÓÃÓÚ½ÓÊÕ¿Í»§·¢ËÍµÄÊı¾İ
+		// åˆ›å»ºæ•°æ®æŠ¥ï¼Œç”¨äºæ¥æ”¶å®¢æˆ·å‘é€çš„æ•°æ®
 		byte[] data = new byte[1024];
 		DatagramPacket packet = new DatagramPacket(data, data.length);
-		System.out.println("·şÎñÆ÷¶ËÒÑÆô¶¯£¬µÈ´ıÁ¬½Ó£º");
-		// ½ÓÊÕ¿Í»§¶ËµÄÊı¾İ
-		socket.receive(packet);// ´Ë·½·¨ÔÚ½ÓÊÕÊı¾İÖ®Ç°»áÒ»Ö±×èÈû
-		// ¶ÁÈ¡¸ÃÊı¾İ
+		System.out.println("æœåŠ¡å™¨ç«¯å·²å¯åŠ¨ï¼Œç­‰å¾…è¿æ¥ï¼š");
+		// æ¥æ”¶å®¢æˆ·ç«¯çš„æ•°æ®
+		socket.receive(packet);// æ­¤æ–¹æ³•åœ¨æ¥æ”¶æ•°æ®ä¹‹å‰ä¼šä¸€ç›´é˜»å¡
+		// è¯»å–è¯¥æ•°æ®
 		String info = new String(data, 0, packet.getLength());
-		System.out.println("·şÎñÆ÷½ÓÊÕµÄÊı¾İÎª£º" + info);
+		System.out.println("æœåŠ¡å™¨æ¥æ”¶çš„æ•°æ®ä¸ºï¼š" + info);
 		/**
-		 * ÏìÓ¦Êı¾İ
+		 * å“åº”æ•°æ®
 		 */
-		// Ïò¿Í»§¶Ë·¢ËÍÊı¾İ
-		// »ñÈ¡¿Í»§¶ËµÄµØÖ·
+		// å‘å®¢æˆ·ç«¯å‘é€æ•°æ®
+		// è·å–å®¢æˆ·ç«¯çš„åœ°å€
 		InetAddress addrs = packet.getAddress();
-		// »ñÈ¡¶Ë¿ÚºÅ
+		// è·å–ç«¯å£å·
 		int port = packet.getPort();
-		byte[] data2 = "»¶Ó­Äú£¡".getBytes();
-		// ´´½¨Êı¾İ±¨
+		byte[] data2 = "æ¬¢è¿æ‚¨ï¼".getBytes();
+		// åˆ›å»ºæ•°æ®æŠ¥
 		DatagramPacket packet2 = new DatagramPacket(data2, data2.length, addrs, port);
-		// ÏìÓ¦¿Í»§¶Ë
+		// å“åº”å®¢æˆ·ç«¯
 		socket.send(packet2);
-		// ¹Ø±Õ×ÊÔ´
+		// å…³é—­èµ„æº
 		socket.close();
 
 	}

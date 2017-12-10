@@ -10,20 +10,20 @@ import java.net.URL;
  * 
  * @author zhanglun
  * @todo
- * @desc »ñÈ¡ÍøÂçÉÏµÄÊı¾İ
+ * @desc è·å–ç½‘ç»œä¸Šçš„æ•°æ®
  */
 public class URLTest {
 	public static void main(String[] args) throws Exception {
-		URL url = new URL("http://localhost/cookie/cookie.php?uname=ÕÅÂ×");
+		URL url = new URL("http://localhost/cookie/cookie.php?uname=å¼ ä¼¦");
 		InputStream is = url.openStream();
-		// ½«×Ö½ÚÊäÈëÁ÷×ªÎª×Ö·ûÊäÈëÁ÷
+		// å°†å­—èŠ‚è¾“å…¥æµè½¬ä¸ºå­—ç¬¦è¾“å…¥æµ
 		InputStreamReader isr = new InputStreamReader(is,"GBK");
-		// Ìí¼Ó»º³åÁ÷£¬Ìá¸ßĞ§ÂÊ
+		// æ·»åŠ ç¼“å†²æµï¼Œæé«˜æ•ˆç‡
 		BufferedReader br = new BufferedReader(isr);
 		String data = br.readLine();
 		while (data != null) {
 			System.out.println(data);
-			// ¶ÁÈ¡ÏÂÒ»ĞĞ
+			// è¯»å–ä¸‹ä¸€è¡Œ
 			data = br.readLine();
 		}
 		br.close();

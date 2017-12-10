@@ -11,7 +11,7 @@ import java.net.Socket;
 /**
  * 
  * @author zhanglun
- * @todo ·şÎñÆ÷Ïß³Ì´¦ÀíÀà
+ * @todo æœåŠ¡å™¨çº¿ç¨‹å¤„ç†ç±»
  * @desc
  */
 public class ServerThread extends Thread {
@@ -20,7 +20,7 @@ public class ServerThread extends Thread {
 		this.socket = socket;
 	}
 	/**
-	 * ÖØĞ´run·½·¨
+	 * é‡å†™runæ–¹æ³•
 	 */
 	public void run() {
 		InputStream is = null;
@@ -28,24 +28,24 @@ public class ServerThread extends Thread {
 		OutputStream os = null;
 		PrintWriter pw = null;
 		try {
-			// »ñÈ¡ÊäÈëÁ÷ÓÃÀ´¶ÁÈ¡¿Í»§¶Ë·¢ËÍµÄĞÅÏ¢
+			// è·å–è¾“å…¥æµç”¨æ¥è¯»å–å®¢æˆ·ç«¯å‘é€çš„ä¿¡æ¯
 			is = socket.getInputStream();
 			br = new BufferedReader(new InputStreamReader(is));
 			String info = null;
-			// Ñ­»·¶ÁÈ¡
+			// å¾ªç¯è¯»å–
 			while ((info = br.readLine()) != null) {
-				System.out.println("ÎÒµÄ·şÎñÆ÷£¬¿Í»§¶ËËµ£º" + info);
+				System.out.println("æˆ‘çš„æœåŠ¡å™¨ï¼Œå®¢æˆ·ç«¯è¯´ï¼š" + info);
 			}
 			socket.shutdownInput();
-			// »ñÈ¡Êä³öÁ÷£¬ÏìÓ¦¿Í»§¶Ë
+			// è·å–è¾“å‡ºæµï¼Œå“åº”å®¢æˆ·ç«¯
 			os = socket.getOutputStream();
 			pw = new PrintWriter(os);
-			pw.write("Á¬½Ó³É¹¦ ");
+			pw.write("è¿æ¥æˆåŠŸ ");
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			// ¹Ø±ÕÏà¹ØÁ¬½Ó
+			// å…³é—­ç›¸å…³è¿æ¥
 			if (pw != null) {
 
 				pw.flush();
