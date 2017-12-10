@@ -1,12 +1,12 @@
 /**
- *@date 2017Äê12ÔÂ10ÈÕÏÂÎç1:34:22
+ *@date 2017å¹´12æœˆ10æ—¥ä¸‹åˆ1:34:22
  */
 package com.zhanglun.test1;
 
 /**
  * @author zhanglun
- * @todo ³õÊ¼»¯Ë³Ğò
- * @desc ÔÚÀàµÄÄÚ²¿£¬±äÁ¿¶¨ÒåµÄÏÈºóË³Ğò¾ö¶¨ÁË³õÊ¼»¯µÄË³Ğò¡£ ¼´Ê¹±äÁ¿¶¨ÒåÉ¢²¼ÓÚ·½·¨¶¨ÒåÖ®¼ä£¬ËüÃÇÈÔ¾É»áÔÚÈÎºÎ·½·¨£¨ °üÀ¨¹¹ÔìÆ÷£©Ö®Ç°µÃµ½³õÊ¼»¯
+ * @todo åˆå§‹åŒ–é¡ºåº
+ * @desc åœ¨ç±»çš„å†…éƒ¨ï¼Œå˜é‡å®šä¹‰çš„å…ˆåé¡ºåºå†³å®šäº†åˆå§‹åŒ–çš„é¡ºåºã€‚ å³ä½¿å˜é‡å®šä¹‰æ•£å¸ƒäºæ–¹æ³•å®šä¹‰ä¹‹é—´ï¼Œå®ƒä»¬ä»æ—§ä¼šåœ¨ä»»ä½•æ–¹æ³•ï¼ˆ åŒ…æ‹¬æ„é€ å™¨ï¼‰ä¹‹å‰å¾—åˆ°åˆå§‹åŒ–
  */
 public class InitTest {
 	public static void main(String[] args) {
@@ -22,19 +22,19 @@ class Window {
 }
 
 class House {
-	Window w = new Window(1); // µÚ1²½
+	Window w = new Window(1); // ç¬¬1æ­¥
 
 	public House() {
-		System.out.println("House()"); // µÚ4²½
-		//ÒòÎª»áÖ´ĞĞ¶¨Òå±äÁ¿µÄ´úÂë
-		w3 = new Window(3); // µÚ5²½
+		System.out.println("House()"); // ç¬¬4æ­¥
+		//å› ä¸ºä¼šæ‰§è¡Œå®šä¹‰å˜é‡çš„ä»£ç 
+		w3 = new Window(3); // ç¬¬5æ­¥
 	}
 
-	Window w2 = new Window(2); // µÚ2²½
+	Window w2 = new Window(2); // ç¬¬2æ­¥
 
 	void f() {
-		System.out.println("f()"); // µÚ6²½
+		System.out.println("f()"); // ç¬¬6æ­¥
 	}
 
-	Window w3 = new Window(3); // µÚ3²½
+	Window w3 = new Window(3); // ç¬¬3æ­¥
 }

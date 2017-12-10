@@ -3,7 +3,7 @@ package com.zhanglun.test1;
 /**
  * @author zhanglun
  * @todo
- * @desc ¾²Ì¬Êı¾İ³õÊ¼»¯
+ * @desc é™æ€æ•°æ®åˆå§‹åŒ–
  */
 class Bowl {
 	Bowl(int marker) {
@@ -16,7 +16,7 @@ class Bowl {
 }
 
 class Table {
-	static Bowl bowl1 = new Bowl(1); // ¾²Ì¬
+	static Bowl bowl1 = new Bowl(1); // é™æ€
 
 	Table() {
 		System.out.println("Table()");
@@ -27,12 +27,12 @@ class Table {
 		System.out.println("f2(" + marker + ");");
 	}
 
-	static Bowl bowl2 = new Bowl(2); // ¾²Ì¬
+	static Bowl bowl2 = new Bowl(2); // é™æ€
 
 }
 
 class Cupboard {
-	Bowl bowl3 = new Bowl(3); // ***»¹ÊÇ»á×ßÕâÒ»²½
+	Bowl bowl3 = new Bowl(3); // ***è¿˜æ˜¯ä¼šèµ°è¿™ä¸€æ­¥
 	static Bowl bowl4 = new Bowl(4);
 
 	Cupboard() {
@@ -49,7 +49,7 @@ class Cupboard {
 
 /*
  * Bowl(1); Bowl(2); Table() f1(1); Bowl(4); Bowl(5); Bowl(3); Cupboard() f1(2);
- * ----------------------------ÉÏÃæÊÇ¾²Ì¬´úÂë²¿·Ö
+ * ----------------------------ä¸Šé¢æ˜¯é™æ€ä»£ç éƒ¨åˆ†
  * 
  * create new Cupboard() in main Bowl(3); Cupboard() f1(2); create new
  * Cupboard() in main Bowl(3); Cupboard() f1(2); f2(1); f3(1);
